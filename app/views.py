@@ -106,7 +106,10 @@ def CommentView(request, article_id):
 
 def blog_search(request,):
 
-    return redirect('app:about')
+    print("function search:")
+    print(request.GET["name"])
+    return redirect('app:index')
+
     # search_for = request.GET['search_for']
     #
     # if search_for:

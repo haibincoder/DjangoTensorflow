@@ -1,0 +1,280 @@
+ERROR 2017-02-08 10:18:03,424 views 6411 140350626912000 邮件发送失败: (535, b'5.7.8 authentication failed')ERROR 2017-10-07 10:11:28,866 exception 12102 140324119840512 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 112, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/cursors.py", line 166, in execute
+    result = self._query(query)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1057, in _read_query_result
+    result.read()
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'blog.app_article' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/views/generic/list.py", line 159, in get
+    self.object_list = self.get_queryset()
+  File "/home/ming/projects/blog/app/views.py", line 29, in get_queryset
+    for article in article_list:
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/models/query.py", line 256, in __iter__
+    self._fetch_all()
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/models/query.py", line 1087, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 835, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 112, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/cursors.py", line 166, in execute
+    result = self._query(query)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1057, in _read_query_result
+    result.read()
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'blog.app_article' doesn't exist")
+ERROR 2017-10-07 10:24:31,582 views 13373 140030823622400 邮件发送失败: Error 111 connecting to localhost:6379. Connection refused.
+ERROR 2017-10-07 11:02:40,385 views 26434 139984518506240 邮件发送失败: (535, b'5.7.8 authentication failed')
+ERROR 2017-10-07 11:03:13,011 views 26595 140543109977856 邮件发送失败: (535, b'5.7.12 SMTP access disabled')
+ERROR 2017-11-29 23:51:25,562 exception 3796 32 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 507, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 215, in _get_response
+    response = response.render()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 107, in render
+    self.content = self.rendered_content
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 64, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader.py", line 48, in select_template
+    return engine.get_template(template_name)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 515, in parse
+    raise self.error(token, e)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 513, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 312, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 515, in parse
+    raise self.error(token, e)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 513, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 255, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 509, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 565, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 13: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2017-11-29 23:51:44,429 exception 3796 7536 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 507, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 215, in _get_response
+    response = response.render()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 107, in render
+    self.content = self.rendered_content
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 64, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader.py", line 48, in select_template
+    return engine.get_template(template_name)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 515, in parse
+    raise self.error(token, e)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 513, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 312, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 515, in parse
+    raise self.error(token, e)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 513, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 255, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 509, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 565, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 11: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2017-11-30 07:54:14,212 exception 4308 5920 Internal Server Error: /search/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\Django\blog\app\views.py", line 109, in blog_search
+    return redirect('app:about')
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 56, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 147, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'about' not found. 'about' is not a valid view function or pattern name.
+ERROR 2017-11-30 18:43:36,326 exception 1440 9212 Internal Server Error: /search/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\Django\blog\app\views.py", line 110, in blog_search
+    return redirect('app:about')
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 56, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 147, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'about' not found. 'about' is not a valid view function or pattern name.
+ERROR 2017-11-30 18:45:26,967 exception 6928 9120 Internal Server Error: /search/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\Django\blog\app\views.py", line 111, in blog_search
+    return redirect('app:about')
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 56, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 147, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'about' not found. 'about' is not a valid view function or pattern name.
+ERROR 2017-11-30 18:46:12,351 exception 6928 9080 Internal Server Error: /search/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\Django\blog\app\views.py", line 111, in blog_search
+    return redirect('app:about')
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 56, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 147, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'about' not found. 'about' is not a valid view function or pattern name.
+ERROR 2017-11-30 18:46:58,350 exception 116 2748 Internal Server Error: /search/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\Django\blog\app\views.py", line 112, in blog_search
+    return redirect('app:about')
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 56, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 147, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'about' not found. 'about' is not a valid view function or pattern name.
