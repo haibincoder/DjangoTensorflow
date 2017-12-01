@@ -21,19 +21,24 @@ canvas.onmousedown = function(e){
     };
 };
 
-function submitimage(event) {
-    $.ajax({
-        type: 'POST',
-        url: '/InputImage/' ,
-        data: data ,
-        success: success ,
-        dataType: dataType
-    });
+function submitimageurl(event) {
+    // 图片导出为 png 格式
+    var type = 'png';
+    // 返回一个包含JPG图片的<img>元素
+    var img_png_src = canvas.toDataURL("image/png");  //将画板保存为图片格式的函数
+    // 加工image data，替换mime type
+    imgData = img_png_src.replace(_fixType(type),'image/octet-stream');
+    // 下载后的问题名
+    var filename = 'image_' + (new Date()).getTime() + '.' + type;
+    // 上传图片地址
+    $.get("/InputImage/",{"image_data":filename}, function(ret){
+        $('#label_result').html(ret)
+    })
 }
 
 function uploadPic(event) {
-    var location = $("#image_png").attr("src");
-    $.get("/InputImage/",{"location":location}, function(ret){
+    var image_data = $("#image_png").attr("src");
+    $.get("/InputImage/",{"image_data":image_data}, function(ret){
         $('#label_result').html(ret)
     })
 }

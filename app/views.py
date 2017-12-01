@@ -1,3 +1,5 @@
+import base64
+
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic.list import ListView
@@ -22,11 +24,20 @@ class IndexView(ListView):
 
 def InputImage(request, ):
     print("function InputImage start:")
-    print("request: ", request.GET['location'])
-    location = str(request.GET['location'])
-    print("location: ", location)
+    print("request: ", request)
+    image_data = str(request.GET['image_data'])
+    # 获取图片数据
+    print("image_data: ", image_data)
 
-    return HttpResponse("上传成功!")
+    # if len(image_data) > 50:
+    #     # base64 转图片
+    #     #imgdata = base64.b64decode(image_data)
+    # else:
+    #     # 使用io流读取图片
+    #     print ("图片地址：",image_data)
+
+    result = "上传成功：" + image_data
+    return HttpResponse(result)
 
 # 参考代码
 def blog_search(request, ):
