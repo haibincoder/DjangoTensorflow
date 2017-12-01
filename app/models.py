@@ -1,8 +1,14 @@
-# from django.db import models
+from django.db import models
+
 # from django.core.urlresolvers import reverse
 #
 # # Create your models here.
 #
+
+#class Image(models.Model):
+    # name = models.TextField
+    # location = ""
+
 # class Article(models.Model):
 #     STATUS_CHOICES = (
 #         ('d', 'part'),

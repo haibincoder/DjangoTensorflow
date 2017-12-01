@@ -22,13 +22,20 @@ canvas.onmousedown = function(e){
 };
 
 function submitimage(event) {
-$.ajax({
-     type: 'POST',
-     url: url ,
-    data: data ,
-    success: success ,
-    dataType: dataType
-});
+    $.ajax({
+        type: 'POST',
+        url: '/InputImage/' ,
+        data: data ,
+        success: success ,
+        dataType: dataType
+    });
+}
+
+function uploadPic(event) {
+    var location = $("#image_png").attr("src");
+    $.get("/InputImage/",{"location":location}, function(ret){
+        $('#label_result').html(ret)
+    })
 }
 
 function clearcanvas(event){
@@ -40,24 +47,22 @@ function clearcanvas(event){
     cxt.closePath();
 }
 
-function copyimage(event)
-{
-var img_png_src = canvas.toDataURL("image/png");  //将画板保存为图片格式的函数
-document.getElementById("image_png").src = img_png_src;
+function copyimage(event){
+    var img_png_src = canvas.toDataURL("image/png");  //将画板保存为图片格式的函数
+    document.getElementById("image_png").src = img_png_src;
 }
 
-function downloadimage(event)
-{
-// 图片导出为 png 格式
-var type = 'png';
-// 返回一个包含JPG图片的<img>元素
-var img_png_src = canvas.toDataURL("image/png");  //将画板保存为图片格式的函数
-// 加工image data，替换mime type
-imgData = img_png_src.replace(_fixType(type),'image/octet-stream');
-// 下载后的问题名
-var filename = 'image_' + (new Date()).getTime() + '.' + type;
-// download
-saveFile(imgData,filename);
+function downloadimage(event){
+    // 图片导出为 png 格式
+    var type = 'png';
+    // 返回一个包含JPG图片的<img>元素
+    var img_png_src = canvas.toDataURL("image/png");  //将画板保存为图片格式的函数
+    // 加工image data，替换mime type
+    imgData = img_png_src.replace(_fixType(type),'image/octet-stream');
+    // 下载后的问题名
+    var filename = 'image_' + (new Date()).getTime() + '.' + type;
+    // download
+    saveFile(imgData,filename);
 }
 
 /**

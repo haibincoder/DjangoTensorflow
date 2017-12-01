@@ -10,5 +10,7 @@ urlpatterns = [
     # url(r"^category/(?P<cate_id>\d+)$", views.CategoryView.as_view(), name='category'),
     # url(r'^article/(?P<article_id>\d+)/comment/$', views.CommentView, name='comment'),
     url(r'^search/$', views.blog_search, name='search'),
+    url(r'^InputImage/$', views.InputImage, name='InputImage'),
+
     url(r'^about_me/$', views.suggest_view, name='about_me'),
 ]

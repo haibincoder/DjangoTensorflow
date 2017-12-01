@@ -1,13 +1,7 @@
+from django.http import HttpResponse
 from django.shortcuts import render
-#from .models import Article, Category, BlogComment, Tag, Suggest
-#from .forms import BlogCommentForm, SuggestForm
-from django.shortcuts import get_object_or_404, redirect, get_list_or_404
 from django.views.generic.list import ListView
-from django.views.generic.detail import DetailView
-import markdown
-import re
 import logging
-from .tasks import celery_send_email
 
 # Create your views here.
 
@@ -23,17 +17,27 @@ class IndexView(ListView):
         Returns:
 
         """
-
         return
 
 
-def blog_search(request,):
+def InputImage(request, ):
+    print("function InputImage start:")
+    print("request: ", request.GET['location'])
+    location = str(request.GET['location'])
+    print("location: ", location)
 
-    print("function search:")
-    print(request.GET["name"])
-    return redirect('app:index')
+    return HttpResponse("上传成功!")
 
+# 参考代码
+def blog_search(request, ):
+    print("function start:")
+    # form = ImageForm()
+    # if request.method == 'post':
+    #     form = ImageForm(request.POST)
 
+    return HttpResponse("上传成功")
+
+# 参考代码
 def suggest_view(request):
     # form = SuggestForm()
     # if request.method == 'POST':
@@ -49,4 +53,3 @@ def suggest_view(request):
     #         #     logger.error("邮件发送失败: {}".format(e))
     #         return redirect('app:thanks')
     return render(request, 'blog/about.html')
-

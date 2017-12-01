@@ -3,23 +3,21 @@
 {% block content %}
 <div class="container">
 
-    <div id="div_canvas" class="row">
-        <canvas id="canvas" width="280" height="280" style="background-color:black"></canvas>
-        <img id="image_png" width="280" height="280" style=" background-color:black">
-    </div>
-    <div>
-        <button  type="button" class="btn btn-default" onclick="copyimage();" >预览</button>
-        <button  type="button" class="btn btn-default" onclick="downloadimage();" >下载</button>
-        <button  type="button" class="btn btn-default" onclick="submitimage();" >提交</button>
-        <button  type="button" class="btn btn-default" >验证</button>
-        <button  type="button" class="btn btn-default" onclick="clearcanvas();" >清除</button>
-        <form action="/search/" method="get">
-            <div class="input-group">
-                <button class="btn btn-default" type="submit">表单</button>
-            </div>
-        </form>
-    </div>
-
+    <form id="form_image" action="/InputImage/" method="get" >
+        <div id="div_canvas" class="row">
+            <canvas id="canvas" width="280" height="280" style="background-color:black"></canvas>
+            <img id="image_png" width="280" height="280" style=" background-color:black">
+        </div>
+        <div>
+            <button  type="button" class="btn btn-default" onclick="copyimage();" >预览</button>
+            <button  type="button" class="btn btn-default" onclick="uploadPic();" >上传</button>
+            <button  type="button" class="btn btn-default" onclick="downloadimage();" >下载</button>
+            <button  type="button" class="btn btn-default" onclick="submitimage();" >提交</button>
+            <button  type="button" class="btn btn-default" >验证</button>
+            <button  type="button" class="btn btn-default" onclick="clearcanvas();" >清除</button>
+            <p id="label_result"></p>
+        </div>
+    </form>
 </div>
 {% endblock content %}
 
