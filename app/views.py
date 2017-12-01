@@ -39,6 +39,7 @@ def InputImage(request, ):
     result = "上传成功：" + image_data
     return HttpResponse(result)
 
+
 # 参考代码
 def blog_search(request, ):
     print("function start:")
@@ -47,6 +48,7 @@ def blog_search(request, ):
     #     form = ImageForm(request.POST)
 
     return HttpResponse("上传成功")
+
 
 # 参考代码
 def suggest_view(request):
