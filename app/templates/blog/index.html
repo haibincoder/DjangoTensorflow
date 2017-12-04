@@ -8,15 +8,20 @@
             <canvas id="canvas" width="280" height="280" style="background-color:black"></canvas>
             <img id="image_png" width="280" height="280" style=" background-color:black">
         </div>
-        <div class="row">
-            <button  type="button" class="btn btn-default" onclick="copyimage();" >预览</button>
-			 <button  type="button" class="btn btn-default" onclick="copyimage();" >识别</button>
-            <button  type="button" class="btn btn-default" onclick="downloadimage();" >下载</button>
-            <button  type="button" class="btn btn-default" onclick="uploadPic();" >上传图片数据</button>
-            <button  type="button" class="btn btn-default" onclick="submitimageurl();" >上传图片地址</button>
-            <button  type="button" class="btn btn-default" onclick="clearcanvas();" >清除</button>
-            <p id="label_result"></p>
+        <div >
+            <div class="row clearfix">
+                <input id="input_tag" type="text" class="form-control django_input col-md-1" placeholder="标签" value="0"/>
+                <h5 id="label_result" class="col-md-1" ></h5>
+            </div>
+            <div class="row clearfix">
+                <button  type="button" class="btn btn-default " onclick="uploadPic();" >上传</button>
+                <button  type="button" class="btn btn-default " onclick="copyimage();" >预览</button>
+                <button  type="button" class="btn btn-default " onclick="copyimage();" >识别</button>
+                <button  type="button" class="btn btn-default " onclick="downloadimage();" >下载</button>
+                <button  type="button" class="btn btn-default " onclick="clearcanvas();" >清除</button>
+            </div>
         </div>
+    </form>
 		<div class="row clearfix">
 		<div class="col-md-12 column">
 			<div class="row clearfix">
@@ -67,7 +72,6 @@
 			</div>
 		</div>
 	</div>
-    </form>
 </div>
 {% endblock content %}
 

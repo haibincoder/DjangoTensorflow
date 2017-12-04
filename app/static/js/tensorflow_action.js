@@ -1,9 +1,11 @@
 canvas = document.getElementById('canvas');
+
 if(canvas.getContext){
     context = canvas.getContext('2d');
 }
 context.lineWidth = 5;
 context.strokeStyle = 'white';
+context.fillStyle="#000000";
 canvas.onmousedown = function(e){
     e.preventDefault();
     var x = e.clientX - canvas.offsetLeft;
@@ -32,13 +34,18 @@ function submitimageurl(event) {
     var filename = 'image_' + (new Date()).getTime() + '.' + type;
     // 上传图片地址
     $.get("/InputImage/",{"image_data":filename}, function(ret){
-        $('#label_result').html(ret)
+        //$('#label_result').html(ret)
+        alter(ret);
     })
 }
 
 function uploadPic(event) {
+    copyimage();
+
+    var tag = $("#input_tag").attr("value");
     var image_data = $("#image_png").attr("src");
-    $.get("/InputImage/",{"image_data":image_data}, function(ret){
+    $.get("/InputImage/",{"tag": tag, "image_data":image_data},
+        function(ret){
         $('#label_result').html(ret)
     })
 }
@@ -95,3 +102,5 @@ var _fixType = function(type) {
    var r = type.match(/png|jpeg|bmp|gif/)[0];
    return 'image/' + r;
 };
+
+clearcanvas();

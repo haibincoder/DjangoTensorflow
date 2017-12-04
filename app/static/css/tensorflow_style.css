@@ -7,3 +7,7 @@ img{vertical-align:top;border:none}
 h1{text-align: center;}
 
 .form-control{text-align: center;}
+
+.django_input{
+    max-width: 100px;
+}

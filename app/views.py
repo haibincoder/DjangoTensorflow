@@ -4,8 +4,9 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic.list import ListView
 import logging
-
+from app.controller.toimage import base64toimg
 # Create your views here.
+
 
 logger = logging.getLogger(__name__)
 
@@ -26,17 +27,15 @@ def InputImage(request, ):
     print("function InputImage start:")
     print("request: ", request)
     image_data = str(request.GET['image_data'])
+    tag = str(request.GET['tag'])
     # 获取图片数据
+    print("tag: ", tag  )
     print("image_data: ", image_data)
 
-    # if len(image_data) > 50:
-    #     # base64 转图片
-    #     #imgdata = base64.b64decode(image_data)
-    # else:
-    #     # 使用io流读取图片
-    #     print ("图片地址：",image_data)
+    strg = image_data.split(',')[1]
+    base64toimg(strg)
 
-    result = "上传成功：" + image_data
+    result = "上传成功"
     return HttpResponse(result)
 
 
