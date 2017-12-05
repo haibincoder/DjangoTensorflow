@@ -4,9 +4,9 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic.list import ListView
 import logging
-from app.controller.toimage import base64toimg
+from app.controller.addPNGToMNIST import ImageToMNIST
 # Create your views here.
-
+from app.controller.toimage import base64toimg
 
 logger = logging.getLogger(__name__)
 
@@ -33,9 +33,7 @@ def InputImage(request, ):
     print("image_data: ", image_data)
 
     strg = image_data.split(',')[1]
-    base64toimg(strg)
-
-    result = "上传成功"
+    result = base64toimg(strg, tag)
     return HttpResponse(result)
 
 
@@ -65,3 +63,9 @@ def suggest_view(request):
     #         #     logger.error("邮件发送失败: {}".format(e))
     #         return redirect('app:thanks')
     return render(request, 'blog/about.html')
+
+def addImageToMNIST(request):
+    print("add start")
+    result = ImageToMNIST()
+
+    return HttpResponse(result)

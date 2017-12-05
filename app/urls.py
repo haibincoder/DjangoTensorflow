@@ -13,4 +13,5 @@ urlpatterns = [
     url(r'^InputImage/$', views.InputImage, name='InputImage'),
 
     url(r'^about_me/$', views.suggest_view, name='about_me'),
+    url(r'^addImageToMNIST/$',views.addImageToMNIST,name='addImage'),
 ]

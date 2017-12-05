@@ -90,3 +90,25 @@ ENV/
 # Rope project settings
 .ropeproject
 Contact GitHub API Training Shop Blog About
+/app/images
+images
+/app/test-images/4
+/app/test-images/5
+/app/test-images/6
+/app/test-images/7
+/app/test-images/8
+/app/test-images/9
+/app/test-images/0
+/app/test-images/1
+/app/test-images/2
+/app/test-images/3
+/app/training-images/3
+/app/training-images/4
+/app/training-images/5
+/app/training-images/6
+/app/training-images/7
+/app/training-images/8
+/app/training-images/9
+/app/training-images/0
+/app/training-images/1
+/app/training-images/2

@@ -23,6 +23,12 @@ canvas.onmousedown = function(e){
     };
 };
 
+$('#input_tag').bind('keypress', function (event) {
+            if (event.keyCode == "13") {
+                uploadPic();
+            }
+        });
+
 function submitimageurl(event) {
     // 图片导出为 png 格式
     var type = 'png';
@@ -42,12 +48,21 @@ function submitimageurl(event) {
 function uploadPic(event) {
     copyimage();
 
-    var tag = $("#input_tag").attr("value");
+    var tag = $("#input_tag").val();
+    //判断是否为数字
+    var reg = new RegExp("^[0-9]*$");
+    if(reg.test(tag))
+    {
+        alert("请输入标签值");
+        return;
+    }
     var image_data = $("#image_png").attr("src");
     $.get("/InputImage/",{"tag": tag, "image_data":image_data},
         function(ret){
         $('#label_result').html(ret)
     })
+
+    $("#input_tag").val(null);
 }
 
 function clearcanvas(event){
@@ -62,6 +77,13 @@ function clearcanvas(event){
 function copyimage(event){
     var img_png_src = canvas.toDataURL("image/png");  //将画板保存为图片格式的函数
     document.getElementById("image_png").src = img_png_src;
+}
+
+function  train(event) {
+    $.get("/addImageToMNIST/",{"tag": 1},
+        function(ret){
+        $('#label_result').html(ret)
+    })
 }
 
 function downloadimage(event){

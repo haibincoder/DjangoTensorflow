@@ -1163,3 +1163,412 @@ Traceback (most recent call last):
   File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
     raise MultiValueDictKeyError(repr(key))
 django.utils.datastructures.MultiValueDictKeyError: "'tag'"
+ERROR 2017-12-05 20:21:38,749 exception 5528 4456 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg)
+TypeError: base64toimg() missing 1 required positional argument: 'tag'
+ERROR 2017-12-05 20:22:15,650 exception 6476 4760 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg)
+TypeError: base64toimg() missing 1 required positional argument: 'tag'
+ERROR 2017-12-05 20:23:06,967 exception 8128 844 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg)
+TypeError: base64toimg() missing 1 required positional argument: 'tag'
+ERROR 2017-12-05 20:23:32,801 exception 8048 696 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 37, in InputImage
+    base64toimg(strg)
+TypeError: base64toimg() missing 1 required positional argument: 'tag'
+ERROR 2017-12-05 20:23:54,800 exception 1768 7284 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:25:03,194 exception 1768 5200 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:25:18,109 exception 1768 2772 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:26:40,862 exception 1768 7996 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-05 20:27:48,076 exception 1768 4172 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-05 20:28:13,523 exception 1768 6964 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-05 20:29:43,748 exception 1768 4620 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-05 20:29:43,749 exception 1768 944 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:30:11,388 exception 1768 7512 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-05 20:30:11,404 exception 1768 7720 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:30:22,319 exception 1768 5512 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:30:22,321 exception 1768 7104 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-05 20:30:59,094 exception 1768 6380 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:31:02,067 exception 1768 4456 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:31:14,264 exception 1768 6460 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:31:21,874 exception 1768 2168 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:32:28,481 exception 5680 7396 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:33:52,548 exception 1020 2152 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:34:42,483 exception 972 2936 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 27, in base64toimg
+    print (train_image_path + filename)
+TypeError: must be str, not UUID
+ERROR 2017-12-05 20:36:29,842 exception 6200 5512 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 37, in base64toimg
+    im.save(train_image_path + filename, quality=30)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\PIL\Image.py", line 1925, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: 'app/training-image/1eb05e04c-d9b8-11e7-886a-0090f5eac0ab.png'
+ERROR 2017-12-05 20:37:04,015 exception 8128 7248 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 30, in base64toimg
+    fs = open( path, "wb")
+FileNotFoundError: [Errno 2] No such file or directory: './images/ff65afdc-d9b8-11e7-9f68-0090f5eac0ab.png'
+ERROR 2017-12-05 20:37:45,836 exception 4148 4924 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 28, in base64toimg
+    fs = open( path, "wb")
+FileNotFoundError: [Errno 2] No such file or directory: './images/18530576-d9b9-11e7-b559-0090f5eac0ab.png'
+ERROR 2017-12-05 20:52:30,599 exception 3296 3280 Internal Server Error: /addImageToMNIST/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: ImageToMNIST() takes 0 positional arguments but 1 was given
+ERROR 2017-12-05 20:53:10,060 exception 6404 1100 Internal Server Error: /addImageToMNIST/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 69, in addImageToMNIST
+    ImageToMNIST()
+  File "D:\Project\DjangoTensorflow\app\controller\addPNGToMNIST.py", line 17, in ImageToMNIST
+    for dirname in os.listdir(name[0])[1:]: # [1:] Excludes .DS_Store from Mac OS
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: './training-images'
+ERROR 2017-12-05 20:53:56,845 exception 5856 7828 Internal Server Error: /addImageToMNIST/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 69, in addImageToMNIST
+    ImageToMNIST()
+  File "D:\Project\DjangoTensorflow\app\controller\addPNGToMNIST.py", line 42, in ImageToMNIST
+    data_image.append(pixel[y,x])
+TypeError: an integer is required (got type tuple)
