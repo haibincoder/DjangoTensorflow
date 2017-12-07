@@ -8,7 +8,10 @@ from app.controller.addPNGToMNIST import ImageToMNIST
 # Create your views here.
 from app.controller.toimage import base64toimg
 from app.controller.ImageToDigital import recognize
+from app.controller.tools import ConvertELogStrToValue
+
 import json
+
 
 logger = logging.getLogger(__name__)
 
@@ -74,7 +77,14 @@ def addImageToMNIST(request):
 
 # 识别图片，返回预测结果
 def predictionImage(request,picturePath):
-    x=recognize(picturePath)
-    prediction = json.dumps(x, ensure_ascii=False, encoding='UTF-8')
+    result=recognize(picturePath)
+
+    temp=[10]
+    i=0
+    for item in result:
+        eLog=ConvertELogStrToValue(str(i))
+        temp[i]=eLog[1]
+        ++i
+    prediction = json.dumps(temp, ensure_ascii=False, encoding='UTF-8')
 
     return HttpResponse(prediction)
