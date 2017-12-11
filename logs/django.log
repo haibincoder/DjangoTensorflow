@@ -1572,3 +1572,66 @@ Traceback (most recent call last):
   File "D:\Project\DjangoTensorflow\app\controller\addPNGToMNIST.py", line 42, in ImageToMNIST
     data_image.append(pixel[y,x])
 TypeError: an integer is required (got type tuple)
+ERROR 2017-12-11 20:03:20,330 exception 1516 6312 Internal Server Error: /check/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 103, in check
+    response = predictionImage(request, result)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 87, in predictionImage
+    prediction = json.dumps(temp, ensure_ascii=False, encoding='UTF-8')
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+TypeError: __init__() got an unexpected keyword argument 'encoding'
+ERROR 2017-12-11 20:07:10,590 exception 9004 9920 Internal Server Error: /check/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 90, in check
+    response = predictionImage(request, result)
+TypeError: predictionImage() takes 1 positional argument but 2 were given
+ERROR 2017-12-11 20:08:46,889 exception 8924 588 Internal Server Error: /check/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 92, in check
+    response = predictionImage(request, result)
+TypeError: predictionImage() takes 1 positional argument but 2 were given
+ERROR 2017-12-11 20:10:00,007 exception 1420 4204 Internal Server Error: /check/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 89, in check
+    response = predictionImage(result)
+  File "D:\Project\DjangoTensorflow\app\controller\predictionImage.py", line 18, in predictionImage
+    prediction = json.dumps(temp, ensure_ascii=False, encoding='UTF-8')
+AttributeError: module 'django_redis.serializers.json' has no attribute 'dumps'
+ERROR 2017-12-11 20:40:09,221 exception 6856 6400 Internal Server Error: /check/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 89, in check
+    response = predictionImage(result)
+  File "D:\Project\DjangoTensorflow\app\controller\predictionImage.py", line 18, in predictionImage
+    prediction = json.dumps(temp, ensure_ascii=False, encoding='UTF-8')
+AttributeError: module 'django_redis.serializers.json' has no attribute 'dumps'

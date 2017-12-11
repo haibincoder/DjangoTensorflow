@@ -51,13 +51,28 @@ function uploadPic(event) {
     var tag = $("#input_tag").val();
     //判断是否为数字
     var reg = new RegExp("^[0-9]*$");
-    if(reg.test(tag))
+    if(!reg.test(tag))
     {
-        alert("请输入标签值");
+        alert("请输入数字标签值");
         return;
     }
     var image_data = $("#image_png").attr("src");
     $.get("/InputImage/",{"tag": tag, "image_data":image_data},
+        function(ret){
+        $('#label_result').html(ret)
+    })
+
+    $("#input_tag").val(null);
+}
+
+function check(event) {
+    copyimage();
+
+    var tag = $("#input_tag").val();
+    //判断是否为数字
+    var reg = new RegExp("^[0-9]*$");
+    var image_data = $("#image_png").attr("src");
+    $.get("/check/",{"tag": tag, "image_data":image_data},
         function(ret){
         $('#label_result').html(ret)
     })

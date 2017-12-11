@@ -11,7 +11,7 @@ urlpatterns = [
     # url(r'^article/(?P<article_id>\d+)/comment/$', views.CommentView, name='comment'),
     url(r'^search/$', views.blog_search, name='search'),
     url(r'^InputImage/$', views.InputImage, name='InputImage'),
-
+    url(r'^check/$', views.check, name='check'),
     url(r'^about_me/$', views.suggest_view, name='about_me'),
     url(r'^addImageToMNIST/$',views.addImageToMNIST,name='addImage'),
     url(r'^prediction/$', views.predictionImage, name='prediction'),

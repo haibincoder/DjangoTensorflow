@@ -11,3 +11,7 @@ h1{text-align: center;}
 .django_input{
     max-width: 100px;
 }
+
+#image_png{
+    visibility: hidden;
+}

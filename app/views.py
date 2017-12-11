@@ -5,13 +5,10 @@ from django.shortcuts import render
 from django.views.generic.list import ListView
 import logging
 from app.controller.addPNGToMNIST import ImageToMNIST
-# Create your views here.
-from app.controller.toimage import base64toimg
-from app.controller.ImageToDigital import recognize
-from app.controller.tools import ConvertELogStrToValue
+from app.controller.predictionImage import predictionImage
+from app.controller.toimage import base64toimg, checkimg
 
 import json
-
 
 logger = logging.getLogger(__name__)
 
@@ -34,7 +31,7 @@ def InputImage(request, ):
     image_data = str(request.GET['image_data'])
     tag = str(request.GET['tag'])
     # 获取图片数据
-    print("tag: ", tag  )
+    print("tag: ", tag)
     print("image_data: ", image_data)
 
     strg = image_data.split(',')[1]
@@ -50,6 +47,7 @@ def blog_search(request, ):
     #     form = ImageForm(request.POST)
 
     return HttpResponse("上传成功")
+
 
 # 参考代码
 def suggest_view(request):
@@ -68,22 +66,25 @@ def suggest_view(request):
     #         return redirect('app:thanks')
     return render(request, 'blog/about.html')
 
+
 def addImageToMNIST(request):
     print("add start")
     result = ImageToMNIST()
 
     return HttpResponse(result)
 
-# 识别图片，返回预测结果
-def predictionImage(request,picturePath):
-    result=recognize(picturePath)
 
-    temp=[10]
-    i=0
-    for item in result:
-        eLog=ConvertELogStrToValue(str(i))
-        temp[i]=eLog[1]
-        ++i
-    prediction = json.dumps(temp, ensure_ascii=False, encoding='UTF-8')
+def check(request, ):
+    print("function InputImage start:")
+    print("request: ", request)
+    image_data = str(request.GET['image_data'])
+    tag = str(request.GET['tag'])
+    # 获取图片数据
+    print("tag: ", tag)
+    print("image_data: ", image_data)
 
-    return HttpResponse(prediction)
+    strg = image_data.split(',')[1]
+    result = checkimg(strg)
+    print("image path: ", result)
+    response = predictionImage(result)
+    return HttpResponse(response)
