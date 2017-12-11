@@ -51,7 +51,6 @@ def blog_search(request, ):
 
     return HttpResponse("上传成功")
 
-
 # 参考代码
 def suggest_view(request):
     # form = SuggestForm()
