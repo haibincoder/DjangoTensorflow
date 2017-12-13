@@ -10,20 +10,15 @@ def predictionImage(picturePath):
     print("start prediction...")
     try:
         result = recognize(picturePath)
-        print(result)
-        temp = [10]
-        i = 0
-        length = len(str(result[9]))
-        for item in result:
-            float_data = np.float16(item)
-            if (float_data) < 0.0001:
-                temp[i] = 0
-            else:
-                temp[i] = '{:.5f}'.format(np.float16(item))
-            ++i
-        print (temp)
-        prediction = json.dumps(temp, ensure_ascii=False, encoding='UTF-8')
 
+        temp = [None]*10
+        i = 0
+        for item in result:
+            result_num=float(item)
+            temp[i]=round(result_num,3)*100
+            i = i + 1
+        prediction = json.dumps(temp)
+        print(prediction)
         return prediction
     except Exception as ex:
         print(ex)

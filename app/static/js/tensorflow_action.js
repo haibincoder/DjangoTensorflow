@@ -65,7 +65,7 @@ function uploadPic(event) {
     $("#input_tag").val(null);
 }
 
-function check(event) {
+function prediction(event) {
     copyimage();
 
     var tag = $("#input_tag").val();
@@ -74,8 +74,13 @@ function check(event) {
     var image_data = $("#image_png").attr("src");
     $.get("/check/",{"tag": tag, "image_data":image_data},
         function(ret){
-        $('#label_result').html(ret)
-    })
+        var result = ret.substring(1, ret.length-1).split(',');
+        var txt_list = $(".txt_result");
+        $('#label_result').html("返回结果：" + ret);
+        for(i = 0; i < txt_list.length; i++){
+            txt_list[i].value = result[i] + "%";
+        }
+    });
 
     $("#input_tag").val(null);
 }
