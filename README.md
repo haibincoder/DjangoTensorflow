@@ -3,6 +3,7 @@
 * 前端：bootstrap，jquery
 * 后台：django, tensorflow
 * 数据集：Mnist
+* 网络结构： CNN-Pool-CNN-Pool-CNN-Full Connec-Softmax
 
 ----------
 ### 简介
