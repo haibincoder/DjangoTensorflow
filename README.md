@@ -1,8 +1,8 @@
 ## 深度学习项目
 手写体识别
-前端：bootstrap，jquery
-后台：django, tensorflow
-数据集：Mnist
+* 前端：bootstrap，jquery
+* 后台：django, tensorflow
+* 数据集：Mnist
 
 ----------
 ### 简介
