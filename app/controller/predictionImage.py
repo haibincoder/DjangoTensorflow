@@ -10,7 +10,7 @@ def predictionImage(picturePath):
     print("start prediction...")
     try:
         result = recognize(picturePath)
-
+        print("predict result:", result)
         temp = [None]*10
         i = 0
         for item in result:

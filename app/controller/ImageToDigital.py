@@ -34,6 +34,7 @@ def bias_variable(shape):
     return tf.Variable(initial)
 
 def recognize(picturePath):
+    print("pcture path:", picturePath)
     myGraph = tf.Graph()
     with myGraph.as_default():
         with tf.name_scope('inputsAndLabels'):
@@ -69,11 +70,14 @@ def recognize(picturePath):
         prediction = tf.argmax(y_conv, 1)  # 计算一行的最大值，返回的是一个最大值的坐标
         prediction = prediction.eval(feed_dict={x_raw: [array], keep_prob: 1},
                                      session=sess)  # 对".eval"对值进行评估，这里我们前面定义了多少个占位符，在session.run()的时候就要喂多少个数据,可以不用在意这句话，这句话的含义相等于session.run
-
+        print("prediction:",prediction) # 输出具体的分类，int
         #writer = tf.summary.FileWriter("/home/hytera/log")
 
         x = sess.run(tf.cast(tf.nn.softmax(y_conv), tf.float32),
                      feed_dict={x_raw: [array], keep_prob: 1})  # 输出概率,输出的为*100的数
+        print("model end:")
+        for item in x:
+            print(item)
         return x[0]
         #print(x[0])
         #writer.add_graph(sess.graph)
