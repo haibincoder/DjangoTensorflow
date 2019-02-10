@@ -54,7 +54,7 @@ for name in Names:
     if max([width, height]) <= 256:
         header.extend([0, 0, 0, width, 0, 0, 0, height])
     else:
-        raise ValueError('Image exceeds maximum size: 256x256 pixels');
+        raise ValueError('Image exceeds maximum size: 256x256 pixels')
 
     header[3] = 3  # Changing MSB for image data (0x00000803)
 

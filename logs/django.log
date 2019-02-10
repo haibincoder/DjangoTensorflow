@@ -1,0 +1,1637 @@
+ERROR 2017-02-08 10:18:03,424 views 6411 140350626912000 ÈÇÆ‰ª∂ÂèëÈÄÅÂ§±Ë¥•: (535, b'5.7.8 authentication failed')ERROR 2017-10-07 10:11:28,866 exception 12102 140324119840512 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 112, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/cursors.py", line 166, in execute
+    result = self._query(query)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1057, in _read_query_result
+    result.read()
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'blog.app_article' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/views/generic/list.py", line 159, in get
+    self.object_list = self.get_queryset()
+  File "/home/ming/projects/blog/app/views.py", line 29, in get_queryset
+    for article in article_list:
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/models/query.py", line 256, in __iter__
+    self._fetch_all()
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/models/query.py", line 1087, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 835, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 112, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/cursors.py", line 166, in execute
+    result = self._query(query)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1057, in _read_query_result
+    result.read()
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ming/.env/blog/lib/python3.5/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'blog.app_article' doesn't exist")
+ERROR 2017-10-07 10:24:31,582 views 13373 140030823622400 ÈÇÆ‰ª∂ÂèëÈÄÅÂ§±Ë¥•: Error 111 connecting to localhost:6379. Connection refused.
+ERROR 2017-10-07 11:02:40,385 views 26434 139984518506240 ÈÇÆ‰ª∂ÂèëÈÄÅÂ§±Ë¥•: (535, b'5.7.8 authentication failed')
+ERROR 2017-10-07 11:03:13,011 views 26595 140543109977856 ÈÇÆ‰ª∂ÂèëÈÄÅÂ§±Ë¥•: (535, b'5.7.12 SMTP access disabled')
+ERROR 2017-11-29 23:51:25,562 exception 3796 32 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 507, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 215, in _get_response
+    response = response.render()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 107, in render
+    self.content = self.rendered_content
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 64, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader.py", line 48, in select_template
+    return engine.get_template(template_name)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 515, in parse
+    raise self.error(token, e)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 513, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 312, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 515, in parse
+    raise self.error(token, e)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 513, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 255, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 509, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 565, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 13: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2017-11-29 23:51:44,429 exception 3796 7536 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 507, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 215, in _get_response
+    response = response.render()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 107, in render
+    self.content = self.rendered_content
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 82, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 64, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader.py", line 48, in select_template
+    return engine.get_template(template_name)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 515, in parse
+    raise self.error(token, e)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 513, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 312, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 515, in parse
+    raise self.error(token, e)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 513, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 255, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 509, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 565, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 11: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2017-11-30 07:54:14,212 exception 4308 5920 Internal Server Error: /search/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\Django\blog\app\views.py", line 109, in blog_search
+    return redirect('app:about')
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 56, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 147, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'about' not found. 'about' is not a valid view function or pattern name.
+ERROR 2017-11-30 18:43:36,326 exception 1440 9212 Internal Server Error: /search/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\Django\blog\app\views.py", line 110, in blog_search
+    return redirect('app:about')
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 56, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 147, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'about' not found. 'about' is not a valid view function or pattern name.
+ERROR 2017-11-30 18:45:26,967 exception 6928 9120 Internal Server Error: /search/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\Django\blog\app\views.py", line 111, in blog_search
+    return redirect('app:about')
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 56, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 147, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'about' not found. 'about' is not a valid view function or pattern name.
+ERROR 2017-11-30 18:46:12,351 exception 6928 9080 Internal Server Error: /search/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\Django\blog\app\views.py", line 111, in blog_search
+    return redirect('app:about')
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 56, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 147, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'about' not found. 'about' is not a valid view function or pattern name.
+ERROR 2017-11-30 18:46:58,350 exception 116 2748 Internal Server Error: /search/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\Django\blog\app\views.py", line 112, in blog_search
+    return redirect('app:about')
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 56, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 147, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'about' not found. 'about' is not a valid view function or pattern name.
+ERROR 2017-12-01 23:23:38,973 exception 720 7696 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 215, in _get_response
+    response = response.render()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 107, in render
+    self.content = self.rendered_content
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'about_me' not found. 'about_me' is not a valid view function or pattern name.
+ERROR 2017-12-01 23:23:50,706 exception 720 7472 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 215, in _get_response
+    response = response.render()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 107, in render
+    self.content = self.rendered_content
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'about_me' not found. 'about_me' is not a valid view function or pattern name.
+ERROR 2017-12-01 23:26:43,552 exception 6952 1852 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 215, in _get_response
+    response = response.render()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 107, in render
+    self.content = self.rendered_content
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'about_me' not found. 'about_me' is not a valid view function or pattern name.
+ERROR 2017-12-01 23:29:00,903 exception 1016 6508 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\list.py", line 160, in get
+    self.object_list = self.get_queryset()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\list.py", line 45, in get_queryset
+    'cls': self.__class__.__name__
+django.core.exceptions.ImproperlyConfigured: IndexView is missing a QuerySet. Define IndexView.model, IndexView.queryset, or override IndexView.get_queryset().
+ERROR 2017-12-01 23:29:12,198 exception 1684 4412 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\list.py", line 160, in get
+    self.object_list = self.get_queryset()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\list.py", line 45, in get_queryset
+    'cls': self.__class__.__name__
+django.core.exceptions.ImproperlyConfigured: IndexView is missing a QuerySet. Define IndexView.model, IndexView.queryset, or override IndexView.get_queryset().
+ERROR 2017-12-01 23:35:27,582 exception 4956 4076 Internal Server Error: /about_me/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 56, in suggest_view
+    return render(request, 'blog/about.html', {'form': form})
+NameError: name 'form' is not defined
+ERROR 2017-12-01 23:39:25,775 exception 6152 6440 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\list.py", line 160, in get
+    self.object_list = self.get_queryset()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\list.py", line 45, in get_queryset
+    'cls': self.__class__.__name__
+django.core.exceptions.ImproperlyConfigured: IndexView is missing a QuerySet. Define IndexView.model, IndexView.queryset, or override IndexView.get_queryset().
+ERROR 2017-12-01 23:42:51,385 exception 5340 484 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 154, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 151, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 131, in find_template
+    template_name, skip=history,
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\engine.py", line 148, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: blog/base.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 215, in _get_response
+    response = response.render()
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 107, in render
+    self.content = self.rendered_content
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 68, in render
+    reraise(exc, self.backend)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 89, in reraise
+    six.reraise(exc.__class__, new, sys.exc_info()[2])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 154, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 151, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 131, in find_template
+    template_name, skip=history,
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\engine.py", line 148, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: blog/base.html
+ERROR 2017-12-01 23:46:19,295 exception 4740 8660 Internal Server Error: /search/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 37, in blog_search
+    print(request.GET["name"])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2017-12-01 23:46:32,482 exception 4740 8032 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'location'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 31, in InputImage
+    print ("Image Location: ", request.GET["location"])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'location'"
+ERROR 2017-12-01 23:47:12,266 exception 4740 4580 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'location'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 31, in InputImage
+    print ("Image Location: ", request.GET["location"])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'location'"
+ERROR 2017-12-01 23:47:44,254 exception 5600 760 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'location'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 31, in InputImage
+    print ("Image Location: ", request.GET["location"])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'location'"
+ERROR 2017-12-02 00:40:00,750 exception 2712 7076 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 37, in InputImage
+    result = str("…œ¥´≥…π¶:",location)
+TypeError: decoding str is not supported
+ERROR 2017-12-02 00:40:24,384 exception 2020 8764 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 37, in InputImage
+    result = str("…œ¥´≥…π¶:",location)
+TypeError: decoding str is not supported
+ERROR 2017-12-02 00:50:37,628 exception 1156 7284 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'location'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 27, in InputImage
+    print("request: ", request.GET['location'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'location'"
+ERROR 2017-12-02 00:51:03,602 exception 3444 6704 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'location'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 27, in InputImage
+    print("request: ", request.GET['location'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'location'"
+ERROR 2017-12-02 00:51:38,408 exception 6156 944 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'location'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 27, in InputImage
+    print("request: ", request.GET['location'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'location'"
+ERROR 2017-12-02 00:56:23,783 exception 7548 8896 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'location'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 27, in InputImage
+    print("request: ", request.GET['location'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'location'"
+ERROR 2017-12-02 00:57:02,865 exception 7284 4408 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'location'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 27, in InputImage
+    print("request: ", request.GET['location'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'location'"
+ERROR 2017-12-02 00:59:20,206 exception 5596 5396 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 34, in InputImage
+    imgdata = base64.b64decode(image_data)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+ERROR 2017-12-02 01:00:48,315 exception 4496 3040 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 38, in InputImage
+    result = str("…œ¥´≥…π¶£∫",image_data)
+TypeError: decoding str is not supported
+ERROR 2017-12-04 20:11:00,801 exception 3860 6964 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 34, in InputImage
+    base64toimg(image_data)
+  File "D:\Project\DjangoTensorflow\app\controller\__init__.py", line 14, in base64toimg
+    fs = open("../images/1.png", "wb")
+FileNotFoundError: [Errno 2] No such file or directory: '../images/1.png'
+ERROR 2017-12-04 20:12:28,576 exception 292 76 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 34, in InputImage
+    base64toimg(image_data)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 14, in base64toimg
+    fs = open("../images/1.png", "wb")
+FileNotFoundError: [Errno 2] No such file or directory: '../images/1.png'
+ERROR 2017-12-04 20:12:34,700 exception 292 5028 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 34, in InputImage
+    base64toimg(image_data)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 14, in base64toimg
+    fs = open("../images/1.png", "wb")
+FileNotFoundError: [Errno 2] No such file or directory: '../images/1.png'
+ERROR 2017-12-04 20:12:38,535 exception 292 7084 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 34, in InputImage
+    base64toimg(image_data)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 14, in base64toimg
+    fs = open("../images/1.png", "wb")
+FileNotFoundError: [Errno 2] No such file or directory: '../images/1.png'
+ERROR 2017-12-04 20:13:12,084 exception 6448 7164 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 34, in InputImage
+    base64toimg(image_data)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 14, in base64toimg
+    fs = open("/images/1.png", "wb")
+FileNotFoundError: [Errno 2] No such file or directory: '/images/1.png'
+ERROR 2017-12-04 20:13:24,741 exception 6448 6064 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 34, in InputImage
+    base64toimg(image_data)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 14, in base64toimg
+    fs = open("/1.png", "wb")
+FileNotFoundError: [Errno 2] No such file or directory: '/images/1.png'
+ERROR 2017-12-04 20:13:28,701 exception 6448 4772 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 34, in InputImage
+    base64toimg(image_data)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 14, in base64toimg
+    fs = open("/1.png", "wb")
+FileNotFoundError: [Errno 2] No such file or directory: '/images/1.png'
+ERROR 2017-12-04 20:14:50,487 exception 5728 2020 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 41, in InputImage
+    imgdata = base64.b64decode(image_data.encode())
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+ERROR 2017-12-04 20:18:52,757 exception 1848 4240 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 34, in InputImage
+    base64toimg(strg)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 14, in base64toimg
+    fs = open("../images/1.png", "wb")
+FileNotFoundError: [Errno 2] No such file or directory: '../images/1.png'
+ERROR 2017-12-04 20:28:23,570 exception 2948 3944 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\base64.py", line 517, in _input_type_check
+    m = memoryview(s)
+TypeError: memoryview: a bytes-like object is required, not 'str'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 34, in InputImage
+    base64toimg(strg)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 11, in base64toimg
+    result = base64.decodebytes(strg)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\base64.py", line 552, in decodebytes
+    _input_type_check(s)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\base64.py", line 520, in _input_type_check
+    raise TypeError(msg) from err
+TypeError: expected bytes-like object, not str
+ERROR 2017-12-04 20:36:16,575 exception 2892 7644 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 34, in InputImage
+    base64toimg(strg)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 18, in base64toimg
+    result = result.resize( ( 28, 28 ), Image.ANTIALIAS )
+AttributeError: 'bytes' object has no attribute 'resize'
+ERROR 2017-12-04 20:37:53,662 exception 2904 2672 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 34, in InputImage
+    base64toimg(strg)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 18, in base64toimg
+    img = result.resize( ( 28, 28 ), Image.ANTIALIAS )
+AttributeError: 'bytes' object has no attribute 'resize'
+ERROR 2017-12-04 20:38:26,792 exception 1848 3872 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 34, in InputImage
+    base64toimg(strg)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 18, in base64toimg
+    img = result.resize( ( 28, 28 ), Image.ANTIALIAS )
+AttributeError: 'bytes' object has no attribute 'resize'
+ERROR 2017-12-04 20:38:51,907 exception 4628 780 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 34, in InputImage
+    base64toimg(strg)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 18, in base64toimg
+    result = result.resize( ( 28, 28 ), Image.ANTIALIAS )
+AttributeError: 'bytes' object has no attribute 'resize'
+ERROR 2017-12-04 20:39:02,601 exception 4628 7468 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 34, in InputImage
+    base64toimg(strg)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 18, in base64toimg
+    #result = result.resize( ( 28, 28 ), Image.ANTIALIAS )
+AttributeError: 'bytes' object has no attribute 'resize'
+ERROR 2017-12-04 20:51:53,488 exception 5600 6212 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-04 20:52:08,224 exception 7248 7500 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-04 20:52:26,122 exception 4804 1168 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-04 20:54:09,336 exception 6360 7900 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-04 20:54:13,952 exception 6360 4940 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-04 20:54:27,242 exception 6360 6820 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-04 20:54:46,441 exception 6360 936 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-04 20:55:34,235 exception 7864 3352 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-04 21:09:28,024 exception 6904 5748 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 30, in InputImage
+    tag = str(request.GET['tag'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'tag'"
+ERROR 2017-12-04 21:09:30,213 exception 6904 7052 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 30, in InputImage
+    tag = str(request.GET['tag'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'tag'"
+ERROR 2017-12-04 21:09:44,118 exception 6904 704 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 30, in InputImage
+    tag = str(request.GET['tag'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'tag'"
+ERROR 2017-12-05 20:21:38,749 exception 5528 4456 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg)
+TypeError: base64toimg() missing 1 required positional argument: 'tag'
+ERROR 2017-12-05 20:22:15,650 exception 6476 4760 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg)
+TypeError: base64toimg() missing 1 required positional argument: 'tag'
+ERROR 2017-12-05 20:23:06,967 exception 8128 844 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg)
+TypeError: base64toimg() missing 1 required positional argument: 'tag'
+ERROR 2017-12-05 20:23:32,801 exception 8048 696 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 37, in InputImage
+    base64toimg(strg)
+TypeError: base64toimg() missing 1 required positional argument: 'tag'
+ERROR 2017-12-05 20:23:54,800 exception 1768 7284 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:25:03,194 exception 1768 5200 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:25:18,109 exception 1768 2772 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:26:40,862 exception 1768 7996 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-05 20:27:48,076 exception 1768 4172 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-05 20:28:13,523 exception 1768 6964 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-05 20:29:43,748 exception 1768 4620 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-05 20:29:43,749 exception 1768 944 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:30:11,388 exception 1768 7512 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-05 20:30:11,404 exception 1768 7720 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:30:22,319 exception 1768 5512 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:30:22,321 exception 1768 7104 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'image_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 29, in InputImage
+    image_data = str(request.GET['image_data'])
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'image_data'"
+ERROR 2017-12-05 20:30:59,094 exception 1768 6380 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:31:02,067 exception 1768 4456 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:31:14,264 exception 1768 6460 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:31:21,874 exception 1768 2168 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:32:28,481 exception 5680 7396 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:33:52,548 exception 1020 2152 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 25, in base64toimg
+    filename = uuid.uuid1() + ".png"
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+ERROR 2017-12-05 20:34:42,483 exception 972 2936 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 27, in base64toimg
+    print (train_image_path + filename)
+TypeError: must be str, not UUID
+ERROR 2017-12-05 20:36:29,842 exception 6200 5512 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 37, in base64toimg
+    im.save(train_image_path + filename, quality=30)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\PIL\Image.py", line 1925, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: 'app/training-image/1eb05e04c-d9b8-11e7-886a-0090f5eac0ab.png'
+ERROR 2017-12-05 20:37:04,015 exception 8128 7248 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 30, in base64toimg
+    fs = open( path, "wb")
+FileNotFoundError: [Errno 2] No such file or directory: './images/ff65afdc-d9b8-11e7-9f68-0090f5eac0ab.png'
+ERROR 2017-12-05 20:37:45,836 exception 4148 4924 Internal Server Error: /InputImage/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 36, in InputImage
+    base64toimg(strg, tag)
+  File "D:\Project\DjangoTensorflow\app\controller\toimage.py", line 28, in base64toimg
+    fs = open( path, "wb")
+FileNotFoundError: [Errno 2] No such file or directory: './images/18530576-d9b9-11e7-b559-0090f5eac0ab.png'
+ERROR 2017-12-05 20:52:30,599 exception 3296 3280 Internal Server Error: /addImageToMNIST/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: ImageToMNIST() takes 0 positional arguments but 1 was given
+ERROR 2017-12-05 20:53:10,060 exception 6404 1100 Internal Server Error: /addImageToMNIST/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 69, in addImageToMNIST
+    ImageToMNIST()
+  File "D:\Project\DjangoTensorflow\app\controller\addPNGToMNIST.py", line 17, in ImageToMNIST
+    for dirname in os.listdir(name[0])[1:]: # [1:] Excludes .DS_Store from Mac OS
+FileNotFoundError: [WinError 3] œµÕ≥’“≤ªµΩ÷∏∂®µƒ¬∑æ∂°£: './training-images'
+ERROR 2017-12-05 20:53:56,845 exception 5856 7828 Internal Server Error: /addImageToMNIST/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 69, in addImageToMNIST
+    ImageToMNIST()
+  File "D:\Project\DjangoTensorflow\app\controller\addPNGToMNIST.py", line 42, in ImageToMNIST
+    data_image.append(pixel[y,x])
+TypeError: an integer is required (got type tuple)
+ERROR 2017-12-11 20:03:20,330 exception 1516 6312 Internal Server Error: /check/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 103, in check
+    response = predictionImage(request, result)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 87, in predictionImage
+    prediction = json.dumps(temp, ensure_ascii=False, encoding='UTF-8')
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+TypeError: __init__() got an unexpected keyword argument 'encoding'
+ERROR 2017-12-11 20:07:10,590 exception 9004 9920 Internal Server Error: /check/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 90, in check
+    response = predictionImage(request, result)
+TypeError: predictionImage() takes 1 positional argument but 2 were given
+ERROR 2017-12-11 20:08:46,889 exception 8924 588 Internal Server Error: /check/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 92, in check
+    response = predictionImage(request, result)
+TypeError: predictionImage() takes 1 positional argument but 2 were given
+ERROR 2017-12-11 20:10:00,007 exception 1420 4204 Internal Server Error: /check/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 89, in check
+    response = predictionImage(result)
+  File "D:\Project\DjangoTensorflow\app\controller\predictionImage.py", line 18, in predictionImage
+    prediction = json.dumps(temp, ensure_ascii=False, encoding='UTF-8')
+AttributeError: module 'django_redis.serializers.json' has no attribute 'dumps'
+ERROR 2017-12-11 20:40:09,221 exception 6856 6400 Internal Server Error: /check/
+Traceback (most recent call last):
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\bin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Project\DjangoTensorflow\app\views.py", line 89, in check
+    response = predictionImage(result)
+  File "D:\Project\DjangoTensorflow\app\controller\predictionImage.py", line 18, in predictionImage
+    prediction = json.dumps(temp, ensure_ascii=False, encoding='UTF-8')
+AttributeError: module 'django_redis.serializers.json' has no attribute 'dumps'
