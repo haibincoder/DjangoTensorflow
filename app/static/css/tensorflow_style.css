@@ -18,3 +18,7 @@ h1{text-align: center;}
 #image_png{
     visibility: hidden;
 }
+
+#btn_upload{
+    display: None;
+}
