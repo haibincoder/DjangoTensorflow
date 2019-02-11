@@ -12,6 +12,7 @@
 - 最后运行```python manage.py runserver```
 
 --------
+### 运行示例
 - 浏览器输入： [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 - 在画板写数字，点击识别即可
-  [1]: thanks https://github.com/tomming233/blog
+![https://raw.githubusercontent.com/haibincoder/DjangoTensorflow/master/demo.png](https://raw.githubusercontent.com/haibincoder/DjangoTensorflow/master/demo.png)
