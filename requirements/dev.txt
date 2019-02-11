@@ -1,7 +1,7 @@
 amqp==2.1.4
 billiard==3.5.0.2
 celery==4.0.2
-Django==1.10.1
+django>=1.11.18
 django-appconf==1.0.2
 django-bootstrap3==7.1.0
 django-contrib-comments==1.7.2
