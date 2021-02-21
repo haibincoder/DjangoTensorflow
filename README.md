@@ -15,4 +15,4 @@
 ### 运行示例
 - 浏览器输入： [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 - 在画板写数字，点击识别即可
-![https://raw.githubusercontent.com/haibincoder/DjangoTensorflow/master/demo.png](https://raw.githubusercontent.com/haibincoder/DjangoTensorflow/master/demo.png)
+![https://img2020.cnblogs.com/blog/771778/202009/771778-20200928193114543-661353370.png](https://img2020.cnblogs.com/blog/771778/202009/771778-20200928193114543-661353370.png)
