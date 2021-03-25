@@ -125,7 +125,7 @@ python-socketio==2.0.0
 python-telegram-bot==10.1.0
 pytz==2018.7
 pywinpty==0.5.1
-PyYAML==3.12
+PyYAML==5.4
 pyzmq==17.0.0
 qtconsole==4.3.1
 rasa-core-sdk==0.11.5
