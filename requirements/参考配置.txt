@@ -163,7 +163,7 @@ twilio==6.19.2
 Twisted==18.9.0
 typing==3.6.2
 tzlocal==1.5.1
-urllib3==1.22
+urllib3==1.26.5
 vine==1.1.4
 virtualenv==16.1.0
 wcwidth==0.1.7
