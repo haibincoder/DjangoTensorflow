@@ -101,7 +101,7 @@ parso==0.2.0
 pathlib==1.0.1
 pickleshare==0.7.4
 pika==0.11.2
-Pillow==4.3.0
+Pillow==8.2.0
 prompt-toolkit==1.0.14
 protobuf==3.6.1
 psycopg2==2.7.4
